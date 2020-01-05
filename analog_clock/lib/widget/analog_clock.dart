@@ -1,4 +1,4 @@
-import 'package:analog_clock/clock_face.dart';
+import 'package:analog_clock/widget/clock_face.dart';
 import 'package:flutter/material.dart';
 
 class AnalogClock extends StatelessWidget {
@@ -16,10 +16,10 @@ class AnalogClock extends StatelessWidget {
                   width: double.infinity,
                   decoration: new BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.yellow,
+                      color: Colors.black54,
                       boxShadow: <BoxShadow>[
                         new BoxShadow(
-                          offset: new Offset(5.0, 5.0),
+                          offset: new Offset(4.0, 4.0),
                           blurRadius: 4.0,
                         )
                       ]),

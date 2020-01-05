@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:analog_clock/clock_hour_hand_painter.dart';
-import 'package:analog_clock/clock_minute_hand_painter.dart';
-import 'package:analog_clock/clock_second_hand_painter.dart';
+import 'package:analog_clock/painter/clock_hour_hand_painter.dart';
+import 'package:analog_clock/painter/clock_minute_hand_painter.dart';
+import 'package:analog_clock/painter/clock_second_hand_painter.dart';
 import 'package:flutter/material.dart';
 
 class ClockHand extends StatefulWidget {

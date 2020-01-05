@@ -15,7 +15,7 @@ class ClockHourHandPainter extends CustomPainter {
 
     final radius = size.width / 2;
     final Paint paint = Paint()
-      ..color = Colors.black
+      ..color = Colors.black87
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 8.0;
