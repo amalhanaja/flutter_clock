@@ -1,0 +1,36 @@
+import 'package:analog_clock/clock_face.dart';
+import 'package:flutter/material.dart';
+
+class AnalogClock extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new Center(
+        child: new Padding(
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          child: new AspectRatio(
+            aspectRatio: 1.0,
+            child: new Stack(
+              children: <Widget>[
+                new Container(
+                  width: double.infinity,
+                  decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.yellow,
+                      boxShadow: <BoxShadow>[
+                        new BoxShadow(
+                          offset: new Offset(5.0, 5.0),
+                          blurRadius: 4.0,
+                        )
+                      ]),
+                  child: new ClockFace(),
+                ),
+
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
