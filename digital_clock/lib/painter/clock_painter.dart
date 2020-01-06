@@ -9,7 +9,7 @@ class ClockPainter extends CustomPainter {
     @required this.dateTime,
     this.textStyle = const TextStyle(
         color: Colors.redAccent,
-        fontSize: 60,
+        fontSize: 80,
         fontFamily: "DS-Digital",
         fontWeight: FontWeight.bold),
   });
@@ -20,7 +20,9 @@ class ClockPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
       textAlign: TextAlign.center,
       text: TextSpan(
-        style: textStyle,
+        style: dateTime.second % 2 == 0
+            ? textStyle
+            : textStyle.copyWith(color: Colors.transparent),
         text: ":",
       ),
     );
@@ -29,7 +31,9 @@ class ClockPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
       textAlign: TextAlign.center,
       text: TextSpan(
-        style: textStyle,
+        style: dateTime.second % 2 == 0
+            ? textStyle
+            : textStyle.copyWith(color: Colors.transparent),
         text: ":",
       ),
     );
@@ -84,14 +88,20 @@ class ClockPainter extends CustomPainter {
       ..layout(minWidth: 60.0)
       ..paint(
         canvas,
-        Offset(minuteTextPainter.width + (-secondTextPainter.width / 2) + (colonTextPainter2.width),
+        Offset(
+            minuteTextPainter.width +
+                (-secondTextPainter.width / 2) +
+                (colonTextPainter2.width),
             -secondTextPainter.height / 2),
       );
     hourTextPainter
       ..layout(minWidth: 60.0)
       ..paint(
         canvas,
-        Offset((-hourTextPainter.width / 2) - (minuteTextPainter.width) - (colonTextPainter.width),
+        Offset(
+            (-hourTextPainter.width / 2) -
+                (minuteTextPainter.width) -
+                (colonTextPainter.width),
             -hourTextPainter.height / 2),
       );
   }
