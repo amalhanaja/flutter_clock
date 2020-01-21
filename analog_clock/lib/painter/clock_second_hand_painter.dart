@@ -13,7 +13,7 @@ class ClockSecondHandPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final double radius = size.width / 2;
     final Paint paint = Paint()
-      ..color = Colors.redAccent
+      ..color = Color(0xFFBD2B3C)
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 4.0;

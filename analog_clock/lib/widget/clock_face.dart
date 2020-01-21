@@ -13,7 +13,7 @@ class ClockFace extends StatelessWidget {
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Colors.lightBlueAccent),
+                shape: BoxShape.circle, color: Color(0xFF3BB0BA)),
             child: Stack(
               children: <Widget>[
                 Container(
@@ -28,7 +28,7 @@ class ClockFace extends StatelessWidget {
                     width: 88.0,
                     height: 88.0,
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.redAccent),
+                        shape: BoxShape.circle, color: Color(0xFFE8824F)),
                   ),
                 ),
                 Container(
