@@ -12,8 +12,8 @@ class ClockFace extends StatelessWidget {
           aspectRatio: 1.0,
           child: Container(
             width: double.infinity,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Color(0xFF3BB0BA)),
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: Color(0xFF3BB0BA)),
             child: Stack(
               children: <Widget>[
                 Container(
@@ -36,7 +36,8 @@ class ClockFace extends StatelessWidget {
                   height: double.infinity,
                   padding: EdgeInsets.all(28.0),
                   child: CustomPaint(
-                    painter: ClockDialPainter(color: Colors.black87, roundRadius: 8.0),
+                    painter: ClockDialPainter(
+                        color: Colors.black87, roundRadius: 8.0),
                   ),
                 ),
                 ClockHand(),

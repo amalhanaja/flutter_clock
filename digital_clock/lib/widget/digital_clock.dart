@@ -12,7 +12,6 @@ class DigitalClock extends StatefulWidget {
 
 class _DigitalClockState extends State<DigitalClock>
     with SingleTickerProviderStateMixin {
-
   Timer _timer;
   DateTime _dateTime;
 

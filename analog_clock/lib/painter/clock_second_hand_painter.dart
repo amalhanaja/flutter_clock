@@ -21,7 +21,6 @@ class ClockSecondHandPainter extends CustomPainter {
 
     canvas.save();
 
-
     canvas.translate(radius, radius);
     canvas.rotate(2 * pi * dateTime.second / 60);
     path.moveTo(0.0, -radius * 1);
