@@ -1,30 +1,29 @@
+import 'dart:io';
+
 import 'package:analog_clock/widget/analog_clock.dart';
+import 'package:flutter_clock_helper/customizer.dart';
+import 'package:flutter_clock_helper/model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-    return MaterialApp(
-      title: 'Analog Clock',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: new AnalogClock(),
-    );
+void main() {
+  // A temporary measure until Platform supports web and TargetPlatform supports
+  // macOS.
+  if (!kIsWeb && Platform.isMacOS) {
+    // TODO(gspencergoog): Update this when TargetPlatform includes macOS.
+    // https://github.com/flutter/flutter/issues/31366
+    // See https://github.com/flutter/flutter/wiki/Desktop-shells#target-platform-override.
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   }
+
+  // This creates a clock that enables you to customize it.
+  //
+  // The [ClockCustomizer] takes in a [ClockBuilder] that consists of:
+  //  - A clock widget (in this case, [AnalogClock])
+  //  - A model (provided to you by [ClockModel])
+  // For more information, see the flutter_clock_helper package.
+  //
+  // Your job is to edit [AnalogClock], or replace it with your own clock
+  // widget. (Look in analog_clock.dart for more details!)
+  runApp(ClockCustomizer((ClockModel model) => AnalogClock()));
 }
