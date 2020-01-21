@@ -8,9 +8,9 @@ class ClockPainter extends CustomPainter {
   ClockPainter({
     @required this.dateTime,
     this.textStyle = const TextStyle(
-        color: Colors.redAccent,
+        color: Color(0xFF3BB0BA),
         fontSize: 80,
-        fontFamily: "DS-Digital",
+        fontFamily: "Quicksand",
         fontWeight: FontWeight.bold),
   });
 
