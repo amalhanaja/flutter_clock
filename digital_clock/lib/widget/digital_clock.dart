@@ -40,7 +40,7 @@ class _DigitalClockState extends State<DigitalClock>
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: BoxDecoration(color: Colors.transparent),
         child: Center(
           child: CustomPaint(
             painter: ClockPainter(dateTime: _dateTime),

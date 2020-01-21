@@ -74,14 +74,14 @@ class ClockPainter extends CustomPainter {
       ..layout(minWidth: 12.0)
       ..paint(
         canvas,
-        Offset((colonTextPainter.width) - (minuteTextPainter.width),
+        Offset((colonTextPainter.width) - (minuteTextPainter.width) - 8,
             -colonTextPainter.height / 1.8),
       );
     colonTextPainter2
       ..layout(minWidth: 12.0)
       ..paint(
         canvas,
-        Offset(minuteTextPainter.width - (colonTextPainter2.width * 2),
+        Offset(minuteTextPainter.width - (colonTextPainter2.width) - 16,
             -colonTextPainter2.height / 1.8),
       );
     secondTextPainter
@@ -90,7 +90,7 @@ class ClockPainter extends CustomPainter {
         canvas,
         Offset(
             minuteTextPainter.width +
-                (-secondTextPainter.width / 2) +
+                (-secondTextPainter.width / 3) +
                 (colonTextPainter2.width),
             -secondTextPainter.height / 2),
       );
@@ -99,7 +99,7 @@ class ClockPainter extends CustomPainter {
       ..paint(
         canvas,
         Offset(
-            (-hourTextPainter.width / 2) -
+            (-hourTextPainter.width / 1.5) -
                 (minuteTextPainter.width) -
                 (colonTextPainter.width),
             -hourTextPainter.height / 2),
