@@ -49,13 +49,13 @@ class _ClockHandState extends State<ClockHand> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(12.0),
               child: CustomPaint(
                 painter: ClockMinuteHandPainter(dateTime: dateTime),
               ),
             ),
             Container(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(12.0),
               child: CustomPaint(
                 painter: ClockSecondHandPainter(dateTime: dateTime),
               ),

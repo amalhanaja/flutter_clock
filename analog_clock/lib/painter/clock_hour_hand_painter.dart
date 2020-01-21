@@ -25,7 +25,7 @@ class ClockHourHandPainter extends CustomPainter {
         ? 2 * pi * ((dateTime.hour - 12) / 12) + (dateTime.minute / 720)
         : 2 * pi * ((dateTime.hour / 12) + (dateTime.minute / 720)));
 
-    path.moveTo(0.0, -radius * 0.5);
+    path.moveTo(0.0, -radius * 0.60);
     path.lineTo(0.0, 0);
     canvas.drawPath(path, paint);
     canvas.restore();

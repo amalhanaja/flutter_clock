@@ -17,7 +17,7 @@ class AnalogClock extends StatelessWidget {
                   width: double.infinity,
                   decoration: new BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.black54,
+                      color: Color(0xFFF2A870),
                       boxShadow: <BoxShadow>[
                         new BoxShadow(
                           offset: new Offset(4.0, 4.0),

@@ -34,10 +34,10 @@ class ClockFace extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: double.infinity,
-                  padding: EdgeInsets.all(28.0),
+                  padding: EdgeInsets.all(16.0),
                   child: CustomPaint(
                     painter: ClockDialPainter(
-                        color: Colors.black87, roundRadius: 8.0),
+                        color: Colors.black87, roundRadius: 4.0),
                   ),
                 ),
                 ClockHand(),
